@@ -1,0 +1,56 @@
+---
+---
+
+<div class="bg-accent text-background py-2.5 overflow-hidden border-b border-accent/20 select-none relative z-40">
+  <div class="ticker-container w-full overflow-hidden">
+    <div class="ticker-content flex uppercase tracking-widest font-mono text-xs font-bold whitespace-nowrap">
+      <!-- Track 1 -->
+      <div class="ticker-track flex shrink-0 justify-around min-w-full animate-marquee">
+        <span class="px-8">CONCES ATBU R&D 2026</span>
+        <span class="text-background/40">•</span>
+        <span class="px-8">36 Projects Cataloged</span>
+        <span class="text-background/40">•</span>
+        <span class="px-8">15 Finalists Selected</span>
+        <span class="text-background/40">•</span>
+        <span class="px-8">Industry Partnerships Open</span>
+        <span class="text-background/40">•</span>
+      </div>
+      <!-- Track 2 (Required duplicate for infinite seamless loop) -->
+      <div class="ticker-track flex shrink-0 justify-around min-w-full animate-marquee" aria-hidden="true">
+        <span class="px-8">CONCES ATBU R&D 2026</span>
+        <span class="text-background/40">•</span>
+        <span class="px-8">36 Projects Cataloged</span>
+        <span class="text-background/40">•</span>
+        <span class="px-8">15 Finalists Selected</span>
+        <span class="text-background/40">•</span>
+        <span class="px-8">Industry Partnerships Open</span>
+        <span class="text-background/40">•</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .ticker-content {
+    gap: 0px;
+  }
+  
+  .animate-marquee {
+    animation: marquee-scroll 25s linear infinite;
+  }
+
+  /* Seamless transition keyframe layout */
+  @keyframes marquee-scroll {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Optional: Pause ticker on mouse hover for user readability */
+  .ticker-container:hover .animate-marquee {
+    animation-play-state: paused;
+  }
+</style>

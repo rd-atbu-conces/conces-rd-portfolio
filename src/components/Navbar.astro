@@ -1,0 +1,148 @@
+---
+---
+
+<nav class="sticky top-0 z-50 bg-background/80 backdrop-blur-md border-b border-surface/50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+      
+      <!-- Brand Logo / Always acts as root home router link -->
+            <!-- Brand Logo Frame (PNG Option) -->
+      <div class="flex items-center">
+        <a href="/conces-rd-portfolio" class="flex items-center gap-3 group select-none">
+          <!-- Circular Border Frame with Overflow Protection -->
+          <div class="w-10 h-10 rounded-full border border-surface/80 bg-secondary/50 overflow-hidden flex items-center justify-center shrink-0 group-hover:border-primary/40 transition-colors">
+            <img 
+              src="/conces-rd-portfolio/assets/logo.png" 
+              alt="CONCES ATBU Logo" 
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <span class="text-xl font-bold tracking-tight text-text font-display group-hover:text-primary transition-colors">
+            CONCES <span class="text-primary">ATBU</span>
+          </span>
+        </a>
+      </div>
+
+      
+      <!-- Desktop Navigation Link Track -->
+      <div class="hidden md:flex space-x-8 items-center">
+        <!-- The smart home link injects an structural tracker state class -->
+        <a
+          id="nav-home-link"
+          href="/conces-rd-portfolio"
+          class="hidden text-text/60 hover:text-primary transition-colors duration-200 font-medium text-sm tracking-wide border-r border-surface/80 pr-6"
+        >
+          Home
+        </a>
+        <a
+          href="/conces-rd-portfolio/archive"
+          class="nav-link text-text/90 hover:text-primary transition-colors duration-200 font-medium text-sm tracking-wide"
+        >
+          Archive
+        </a>
+        <a
+          href="/conces-rd-portfolio/events"
+          class="nav-link text-text/90 hover:text-primary transition-colors duration-200 font-medium text-sm tracking-wide"
+        >
+          Events
+        </a>
+        <a
+          href="/conces-rd-portfolio/team"
+          class="nav-link text-text/90 hover:text-primary transition-colors duration-200 font-medium text-sm tracking-wide"
+        >
+          Team
+        </a>
+        <a
+          href="/conces-rd-portfolio/contact"
+          class="nav-link text-text/90 hover:text-primary transition-colors duration-200 font-medium text-sm tracking-wide"
+        >
+          Contact
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button UI -->
+      <div class="md:hidden">
+        <button
+          id="mobile-menu-btn"
+          class="text-text hover:text-primary p-2 transition-colors focus:outline-none"
+          aria-label="Toggle Menu"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Menu Content Box Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-surface/40 py-4 space-y-3 bg-background">
+      <a
+        id="mobile-home-link"
+        href="/conces-rd-portfolio"
+        class="hidden px-3 py-2 text-primary font-semibold hover:bg-secondary rounded-lg transition-all"
+      >
+        ← Return Home
+      </a>
+      <a
+        href="/conces-rd-portfolio/archive"
+        class="block px-3 py-2 text-text/90 hover:text-primary hover:bg-secondary rounded-lg transition-all"
+      >
+        Archive
+      </a>
+      <a
+        href="/conces-rd-portfolio/events"
+        class="block px-3 py-2 text-text/90 hover:text-primary hover:bg-secondary rounded-lg transition-all"
+      >
+        Events
+      </a>
+      <a
+        href="/conces-rd-portfolio/team"
+        class="block px-3 py-2 text-text/90 hover:text-primary hover:bg-secondary rounded-lg transition-all"
+      >
+        Team
+      </a>
+      <a
+        href="/conces-rd-portfolio/contact"
+        class="block px-3 py-2 text-text/90 hover:text-primary hover:bg-secondary rounded-lg transition-all"
+      >
+        Contact
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Elements targeting handles selection
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const desktopHomeLink = document.getElementById('nav-home-link');
+  const mobileHomeLink = document.getElementById('mobile-home-link');
+
+  // --- 1. Dynamic Path Checker Logic Engine ---
+  const currentPath = window.location.pathname;
+  
+  // Checks if user is on the main landing root index path or repository route directory
+  const isHomePage = currentPath === '/conces-rd-portfolio' || 
+                     currentPath === '/conces-rd-portfolio/' || 
+                     currentPath === '/' || 
+                     currentPath.endsWith('index.html');
+
+  if (!isHomePage) {
+    // If visitor leaves home, activate the text link loops cleanly
+    if (desktopHomeLink) {
+      desktopHomeLink.classList.remove('hidden');
+      desktopHomeLink.classList.add('inline-block');
+    }
+    if (mobileHomeLink) {
+      mobileHomeLink.classList.remove('hidden');
+      mobileHomeLink.classList.add('block');
+    }
+  }
+
+  // --- 2. Mobile Drawer Toggling Function block ---
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+</script>

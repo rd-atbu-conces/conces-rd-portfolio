@@ -1,0 +1,291 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import projectsData from '../content/projects/exhibition-projects/2026.json';
+
+const spotlightProjects = projectsData.filter(p => p.isSpotlight === true);
+---
+
+<MainLayout title="CONCES ATBU R&D - Home">
+  <!-- Hero Section -->
+  <section class="py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-secondary/40 relative overflow-hidden">
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 bg-gradient-to-r from-text via-text to-muted bg-clip-text text-transparent">
+        Engineering Innovation & Human Capital
+      </h1>
+      <p class="text-lg md:text-xl text-subtle mb-10 max-w-3xl mx-auto font-normal leading-relaxed">
+        CONCES ATBU R&D Initiative showcases cutting-edge research and development
+        projects advancing technology, sustainability, and human development.
+      </p>
+      <div class="flex justify-center">
+        <a
+          href="/conces-rd-portfolio/archive"
+          class="inline-flex items-center justify-center bg-primary text-background font-semibold px-8 py-3.5 rounded-xl hover:bg-primary/90 transition-all duration-300 shadow-lg shadow-primary/10 hover:shadow-primary/20 hover:-translate-y-0.5"
+        >
+          Explore All Projects
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FIRST-TIME VISITOR INTERACTIVE ONBOARDING TOUR DASHBOARD PANEL -->
+  <section id="onboarding-tour-panel" class="hidden py-8 px-4 sm:px-6 lg:px-8 bg-secondary/15 border-b border-surface/50 relative z-20">
+    <div class="max-w-5xl mx-auto bg-background/60 backdrop-blur-md border border-primary/20 rounded-2xl p-6 md:p-8 relative overflow-hidden">
+      <!-- Ambient technical accent lines background design -->
+      <div class="absolute -top-12 -right-12 w-40 h-40 bg-primary/5 blur-2xl rounded-full pointer-events-none"></div>
+
+      <!-- Tour Panel Content Matrix Layout -->
+      <div class="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+        <div class="space-y-2">
+          <div class="flex items-center gap-2">
+            <span class="bg-primary/10 text-primary text-[10px] font-mono font-bold tracking-widest uppercase px-2 py-0.5 rounded border border-primary/20">
+              Interactive Guide Node
+            </span>
+            <h3 class="text-sm font-bold text-text font-mono uppercase tracking-wider">
+              Welcome to the R&D Portfolio System
+            </h3>
+          </div>
+          <p class="text-xs text-subtle leading-relaxed max-w-2xl font-normal">
+            New here? This portal serves as a decentralized database tracking our technical submissions. Use the direct system pathways below to navigate our active research matrix.
+          </p>
+        </div>
+
+        <!-- Dismiss Option Button Action -->
+        <button 
+          id="dismiss-tour-btn"
+          class="text-[11px] font-mono font-bold uppercase tracking-wider text-subtle hover:text-text border border-surface bg-secondary/50 px-4 py-2 rounded-xl transition-all active:scale-95 shrink-0"
+        >
+          Got it, Close ×
+        </button>
+      </div>
+
+      <!-- Operational Destination Roadmap Links Rail Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6 pt-6 border-t border-surface/30">
+        
+        <!-- Pathway Map 1 -->
+        <a href="/conces-rd-portfolio/archive" class="bg-secondary/30 border border-surface/60 hover:border-primary/40 rounded-xl p-4 transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-mono tracking-wider text-primary uppercase font-bold">01 • Directory Archive</span>
+            <span class="text-subtle group-hover:text-primary transition-colors text-xs font-mono">→</span>
+          </div>
+          <p class="text-[11px] text-muted leading-normal font-normal">
+            Access all 36 peer-reviewed technical projects. Toggle back and forth between <strong class="text-text font-semibold">Exhibition Finalists</strong> and <strong class="text-text font-semibold">Core Lab Systems</strong>.
+          </p>
+        </a>
+
+        <!-- Pathway Map 2 -->
+        <a href="/conces-rd-portfolio/events" class="bg-secondary/30 border border-surface/60 hover:border-primary/40 rounded-xl p-4 transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-mono tracking-wider text-primary uppercase font-bold">02 • Science Timeline</span>
+            <span class="text-subtle group-hover:text-primary transition-colors text-xs font-mono">→</span>
+          </div>
+          <p class="text-[11px] text-muted leading-normal font-normal">
+            Review historical milestones. The newest exhibition takes the spotlight header, while older hackathons automatically scale into the log logs.
+          </p>
+        </a>
+
+        <!-- Pathway Map 3 -->
+        <a href="/conces-rd-portfolio/team" class="bg-secondary/30 border border-surface/60 hover:border-primary/40 rounded-xl p-4 transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[10px] font-mono tracking-wider text-primary uppercase font-bold">03 • Roster Registry</span>
+            <span class="text-subtle group-hover:text-primary transition-colors text-xs font-mono">→</span>
+          </div>
+          <p class="text-[11px] text-muted leading-normal font-normal">
+            Meet the academic investigators and contributors tracking active research fields across Leadership, Fellows, and Developer tiers.
+          </p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Spotlight Auto-Scrolling Marquee Section -->
+  <section class="py-20 bg-secondary/30 border-y border-surface/50 overflow-hidden group/marquee">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+      <div class="flex flex-row items-end justify-between gap-4">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-text mb-2">
+            Featured Finalists
+          </h2>
+          <p class="text-subtle text-sm md:text-base">Our most impactful active innovations this batch year.</p>
+        </div>
+        
+        <!-- Manual Navigation Side Control Buttons -->
+        <div class="flex gap-2 relative z-30">
+          <button 
+            id="prev-btn" 
+            class="p-2.5 rounded-xl border border-surface bg-background text-subtle hover:text-primary hover:border-primary/40 transition-all duration-200 active:scale-95"
+            aria-label="Previous Project"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+            </svg>
+          </button>
+          <button 
+            id="next-btn" 
+            class="p-2.5 rounded-xl border border-surface bg-background text-subtle hover:text-primary hover:border-primary/40 transition-all duration-200 active:scale-95"
+            aria-label="Next Project"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Infinite Scrolling Cards Track Container -->
+    <div id="marquee-viewport" class="marquee-viewport w-full relative select-none cursor-grab active:cursor-grabbing overflow-x-auto scrollbar-none snap-x snap-mandatory">
+      <!-- Gradient Faders to hide harsh edges cleanly -->
+      <div class="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none"></div>
+      <div class="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none"></div>
+
+      <!-- Strictly forced into ONE single row -->
+      <div class="marquee-content flex flex-row items-center gap-6 w-max px-4">
+        <!-- Loop Track 1 -->
+        <div class="marquee-track flex flex-row items-center gap-6 animate-projectMarquee shrink-0">
+          {spotlightProjects.map(project => (
+            <div class="w-[340px] md:w-[400px] shrink-0 snap-center pointer-events-auto home-project-card" data-id={project.id}>
+              <ProjectCard
+                id={project.id}
+                title={project.title}
+                lead={project.lead}
+                category={project.category}
+                status={project.status}
+                description={project.description}
+                isSpotlight={true}
+              />
+            </div>
+          ))}
+        </div>
+
+        <!-- Loop Track 2 (Required clone copy for clean loop physics) -->
+        <div class="marquee-track flex flex-row items-center gap-6 animate-projectMarquee shrink-0" aria-hidden="true">
+          {spotlightProjects.map(project => (
+            <div class="w-[340px] md:w-[400px] shrink-0 snap-center pointer-events-auto home-project-card" data-id={project.id}>
+              <ProjectCard
+                id={project.id}
+                title={project.title}
+                lead={project.lead}
+                category={project.category}
+                status={project.status}
+                description={project.description}
+                isSpotlight={true}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-background relative">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+        <div class="text-center p-6 bg-secondary/20 rounded-2xl border border-surface/30">
+          <div class="text-4xl md:text-5xl font-extrabold text-primary mb-2 tracking-tight">36</div>
+          <p class="text-sm font-medium tracking-wide text-subtle uppercase">Total Projects</p>
+        </div>
+        <div class="text-center p-6 bg-secondary/20 rounded-2xl border border-surface/30">
+          <div class="text-4xl md:text-5xl font-extrabold text-accent mb-2 tracking-tight">15</div>
+          <p class="text-sm font-medium tracking-wide text-subtle uppercase">Finalist Projects</p>
+        </div>
+        <div class="text-center p-6 bg-secondary/20 rounded-2xl border border-surface/30">
+          <div class="text-4xl md:text-5xl font-extrabold text-text mb-2 tracking-tight">20+</div>
+          <p class="text-sm font-medium tracking-wide text-subtle uppercase">Research Leaders</p>
+        </div>
+        <div class="text-center p-6 bg-secondary/20 rounded-2xl border border-surface/30">
+          <div class="text-4xl md:text-5xl font-extrabold text-primary mb-2 tracking-tight">2026</div>
+          <p class="text-sm font-medium tracking-wide text-subtle uppercase">Batch Year</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<script>
+  // --- 1. First-Time Visitor Onboarding Tour Logic ---
+  const tourPanel = document.getElementById('onboarding-tour-panel');
+  const dismissBtn = document.getElementById('dismiss-tour-btn');
+
+  // Check browser local storage cache to detect returning visits
+  const hasVisitedBefore = localStorage.getItem('conces_portfolio_returning_user');
+
+  if (!hasVisitedBefore && tourPanel) {
+    tourPanel.classList.remove('hidden');
+    tourPanel.classList.add('block');
+  }
+
+  if (dismissBtn && tourPanel) {
+    dismissBtn.addEventListener('click', () => {
+      localStorage.setItem('conces_portfolio_returning_user', 'true');
+      tourPanel.classList.replace('block', 'hidden');
+    });
+  }
+
+  // --- 2. Spotlight Continuous Marquee & Button Steering Logic ---
+  const viewport = document.getElementById('marquee-viewport');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  const projectCards = document.querySelectorAll('.home-project-card');
+
+  // Interactive Card Click Forwarding Redirections
+  projectCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const projectId = card.getAttribute('data-id');
+      if (projectId) {
+        window.location.href = `/conces-rd-portfolio/projects/${projectId}`;
+      }
+    });
+  });
+
+  // Manual Step Controller Shifts
+  const cardWidth = 424; // Card frame dimension sizing metrics (400px + gap-6 offset)
+
+  if (viewport && prevBtn && nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      viewport.classList.add('pause-animation');
+      viewport.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    });
+
+    prevBtn.addEventListener('click', () => {
+      viewport.classList.add('pause-animation');
+      viewport.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    });
+  }
+</script>
+
+
+<style>
+  /* 65 seconds makes the infinite motion extremely elegant and readable */
+  .animate-projectMarquee {
+    animation: scroll-cards 65s linear infinite;
+  }
+
+  @keyframes scroll-cards {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% - 1.5rem));
+    }
+  }
+
+  /* When cursor hovers, or button navigation is used, pause animation rules */
+  .marquee-viewport:hover .animate-projectMarquee,
+  .pause-animation .animate-projectMarquee {
+    animation-play-state: paused;
+  }
+
+  /* Utility class to cleanly hide default ugly scrollbars entirely */
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>

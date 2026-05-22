@@ -1,0 +1,14 @@
+{
+  "id": "ultrasonic-humidifier",
+  "title": "Automated Ultrasonic Humidifier Core",
+  "lead": "Eng. Chisom Nwosu",
+  "startDate": "2026-05-22",
+  "category": "Hardware Instrumentation",
+  "status": "Active Research",
+  "description": "An industrial-grade automated humidity regulator module utilizing integrated piezoelectric transducers combined with DHT22 atmospheric telemetry feedback loops.",
+  "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+  "gallery": [
+    "/conces-rd-portfolio/images/bts1.jpg"
+  ],
+  "liveUrl": ""
+}

@@ -1,0 +1,186 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+import exhibitionProjects from '../content/projects/exhibition-projects/2026.json';
+const coreProjects = await Astro.glob('../content/projects/projects/*.json');
+---
+
+<MainLayout title="CONCES ATBU R&D - Directory Archive">
+  <!-- Header Branding Section -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-secondary/30 border-b border-surface/40 relative overflow-hidden">
+    <div class="absolute top-0 right-1/4 w-96 h-96 bg-primary/5 blur-[100px] rounded-full pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative z-10">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-text mb-4 tracking-tight">
+        R&D Repository Archive
+      </h1>
+      <p class="text-base md:text-lg text-subtle max-w-2xl font-normal">
+        Access the collective knowledge base mapping our dedicated laboratory hardware architectures and annual competitive innovation directories.
+      </p>
+    </div>
+  </section>
+
+  <!-- Master Category View Toggle Switcher Layout -->
+  <section class="py-5 px-4 sm:px-6 lg:px-8 bg-secondary/10 border-b border-surface/40 sticky top-20 z-40 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div class="flex p-1 bg-background border border-surface/80 rounded-xl w-max select-none">
+        <button 
+          id="tab-exhibition" 
+          class="px-5 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-primary text-background"
+        >
+          Exhibition Archive Matrix ({exhibitionProjects.length})
+        </button>
+        <button 
+          id="tab-core" 
+          class="px-5 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-200 text-subtle hover:text-text"
+        >
+          Core Laboratory Systems ({coreProjects.length})
+        </button>
+      </div>
+
+      <!-- Quick Context Info Metric Badge -->
+      <div id="filter-metric-log" class="text-xs font-mono text-subtle/80">
+        Active View Context: <span class="text-primary font-bold">Annual Submissions</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIEW BOX A: ANNUAL EXHIBITION CLUSTER -->
+  <div id="view-exhibition-pane" class="block">
+    <!-- Mini Status Filtering Ribbon Row -->
+    <div class="py-6 px-4 sm:px-6 lg:px-8 bg-secondary/30 border-b border-surface/30">
+      <div class="max-w-7xl mx-auto flex flex-wrap gap-2">
+        <button class="status-btn active text-[10px] font-mono uppercase tracking-wider px-4 py-1.5 rounded-md border border-primary/20 bg-primary text-background transition-all" data-status="all">All</button>
+        <button class="status-btn text-[10px] font-mono uppercase tracking-wider px-4 py-1.5 rounded-md border border-surface bg-background text-subtle hover:text-text transition-all" data-status="Finalist">Finalists</button>
+        <button class="status-btn text-[10px] font-mono uppercase tracking-wider px-4 py-1.5 rounded-md border border-surface bg-background text-subtle hover:text-text transition-all" data-status="Prototype">Prototypes</button>
+        <button class="status-btn text-[10px] font-mono uppercase tracking-wider px-4 py-1.5 rounded-md border border-surface bg-background text-subtle hover:text-text transition-all" data-status="Active Research">In-Progress</button>
+      </div>
+    </div>
+
+    <!-- The Exhibition Grid Core Module -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 bg-background">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="exhibition-grid">
+          {exhibitionProjects.map(project => (
+            <div class="exhibition-item-card transition-all duration-300" data-status={project.status} data-id={project.id}>
+              <ProjectCard
+                id={project.id}
+                title={project.title}
+                lead={project.lead}
+                category={project.category}
+                status={project.status}
+                description={project.description}
+                isSpotlight={project.isSpotlight}
+                podiumRank={project.podiumRank}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- VIEW BOX B: CORE LAB INITIATIVES CLUSTER (Hidden Natively Until Toggle Clicked) -->
+  <div id="view-core-pane" class="hidden">
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-background">
+      <div class="max-w-7xl mx-auto">
+        {coreProjects.length === 0 ? (
+          <div class="text-center py-12 border border-dashed border-surface rounded-2xl max-w-md mx-auto">
+            <p class="text-sm font-mono text-subtle">No stealth systems active in this batch folder node yet.</p>
+          </div>
+        ) : (
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {coreProjects.map(project => (
+              <div class="core-item-card" data-id={project.id}>
+                <ProjectCard
+                  id={project.id}
+                  title={project.title}
+                  lead={project.lead}
+                  category={project.category}
+                  status={project.status}
+                  description={project.description}
+                  isSpotlight={false}
+                />
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+  </div>
+</MainLayout>
+
+<script>
+  // Elements capture selectors references
+  const tabExhibition = document.getElementById('tab-exhibition');
+  const tabCore = document.getElementById('tab-core');
+  const paneExhibition = document.getElementById('view-exhibition-pane');
+  const paneCore = document.getElementById('view-view-core-pane') || document.getElementById('view-core-pane');
+  const metricLog = document.getElementById('filter-metric-log');
+
+  const statusBtns = document.querySelectorAll('.status-btn');
+  const exhibitionCards = document.querySelectorAll<HTMLElement>('.exhibition-item-card');
+  const coreCards = document.querySelectorAll<HTMLElement>('.core-item-card');
+
+  // --- 1. Master Tab Toggling Navigation Loop Engine ---
+  if (tabExhibition && tabCore && paneExhibition && paneCore && metricLog) {
+    tabCore.addEventListener('click', () => {
+      // Toggle button highlights
+      tabCore.className = "px-5 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-primary text-background";
+      tabExhibition.className = "px-5 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-200 text-subtle hover:text-text";
+      
+      // Swap content cards visibility layout panels
+      paneExhibition.classList.replace('block', 'hidden');
+      paneCore.classList.replace('hidden', 'block');
+      metricLog.innerHTML = 'Active View Context: <span class="text-accent font-bold">Long-Term Systems</span>';
+    });
+
+    tabExhibition.addEventListener('click', () => {
+      tabExhibition.className = "px-5 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-primary text-background";
+      tabCore.className = "px-5 py-2 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-200 text-subtle hover:text-text";
+      
+      paneCore.classList.replace('block', 'hidden');
+      paneExhibition.classList.replace('hidden', 'block');
+      metricLog.innerHTML = 'Active View Context: <span class="text-primary font-bold">Annual Submissions</span>';
+    });
+  }
+
+  // --- 2. Exhibition Interior Status Filters Submatrix Row ---
+  statusBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetStatus = btn.getAttribute('data-status');
+
+      statusBtns.forEach(b => {
+        b.classList.remove('active', 'bg-primary', 'text-background', 'border-primary/20');
+        b.classList.add('text-subtle', 'border-surface', 'bg-background/50');
+      });
+      btn.classList.add('active', 'bg-primary', 'text-background', 'border-primary/20');
+      btn.classList.remove('text-subtle', 'border-surface', 'bg-background/50');
+
+      exhibitionCards.forEach(card => {
+        const cardStatus = card.getAttribute('data-status');
+        if (targetStatus === 'all' || cardStatus === targetStatus) {
+          card.classList.remove('hidden', 'opacity-0', 'scale-95');
+          card.classList.add('block', 'opacity-100', 'scale-100');
+        } else {
+          card.classList.remove('block', 'opacity-100', 'scale-100');
+          card.classList.add('hidden', 'opacity-0', 'scale-95');
+        }
+      });
+    });
+  });
+
+  // --- 3. Click Forwarding Pipelines Routing Core Action Maps ---
+  const bindRouterClick = (elementList: NodeListOf<HTMLElement>) => {
+    elementList.forEach(card => {
+      card.addEventListener('click', () => {
+        const targetId = card.getAttribute('data-id');
+        if (targetId) {
+          window.location.href = `/conces-rd-portfolio/projects/${targetId}`;
+        }
+      });
+    });
+  };
+  bindRouterClick(exhibitionCards);
+  bindRouterClick(coreCards);
+</script>

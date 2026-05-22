@@ -1,0 +1,184 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+
+// 1. Gather all data sources for compilation mapping
+import exhibitionArray from '../../content/projects/exhibition-projects/2026.json';
+
+export async function getStaticPaths() {
+  // Source A: Parse the individual Core Lab project files cleanly
+  const coreFiles = await Astro.glob('../../../src/content/projects/projects/*.json');
+  const corePaths = coreFiles.map((file) => ({
+    params: { id: String(file.id) },
+    props: { project: file, isCoreLab: true },
+  }));
+
+  // Source B: Parse the array-based Exhibition files tracking lists
+  const exhibitionPaths = exhibitionArray.map((project) => ({
+    params: { id: String(project.id) },
+    props: { project, isCoreLab: false },
+  }));
+
+  // Combine both pipelines into a single static routing map
+  return [...corePaths, ...exhibitionPaths];
+}
+
+interface ProjectSchema {
+  id: string;
+  title: string;
+  lead: string;
+  category: string;
+  status: string;
+  description: string;
+  year?: number;
+  startDate?: string;
+  podiumRank?: number;
+  mainImage?: string;
+  gallery?: string[];
+  liveUrl?: string;
+}
+
+const { project, isCoreLab } = Astro.props as { project: ProjectSchema; isCoreLab: boolean };
+
+// Dynamic Podium Styling Matrix
+const podiumConfigs: Record<number, { text: string; styles: string }> = {
+  1: { text: "Grand Laureate (1st Place)", styles: "bg-amber-500/10 text-amber-400 border-amber-500/30" },
+  2: { text: "Distinguished Innovator (2nd Place)", styles: "bg-slate-300/10 text-slate-300 border-slate-300/30" },
+  3: { text: "Technical Excellence (3rd Place)", styles: "bg-amber-700/10 text-amber-600 border-amber-700/30" }
+};
+const podium = project.podiumRank ? podiumConfigs[project.podiumRank] : null;
+
+// Baseline contextual tag colors matching your design tokens
+const statusStyles: Record<string, string> = {
+  'Finalist': 'bg-accent/10 text-accent border border-accent/20',
+  'Prototype': 'bg-primary/10 text-primary border border-primary/20',
+  'Active Research': 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20',
+};
+const statusStyle = statusStyles[project.status] || 'bg-muted/10 text-muted border border-muted/20';
+---
+
+<MainLayout title={`${project.title} - CONCES ATBU R&D`}>
+  <div class="bg-background min-h-screen py-16 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl mx-auto">
+      
+      <!-- Back Navigation Link Anchor -->
+      <a 
+        href="/conces-rd-portfolio/archive" 
+        class="inline-flex items-center gap-2 text-xs font-mono text-subtle hover:text-primary mb-10 transition-colors group"
+      >
+        <svg class="w-4 h-4 transform group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+        Back To Portfolio Index
+      </a>
+
+      <!-- Header Presentation Row -->
+      <header class="border-b border-surface/60 pb-8 mb-10">
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+          <span class="text-xs font-mono tracking-wider text-primary bg-primary/5 border border-primary/10 px-2.5 py-1 rounded-md uppercase">
+            {project.category}
+          </span>
+          <span class={`px-2.5 py-1 rounded-md text-xs font-semibold tracking-wide ${statusStyle}`}>
+            {project.status}
+          </span>
+          {podium && (
+            <span class={`px-2.5 py-1 rounded-md text-xs font-bold tracking-wide border font-mono ${podium.styles}`}>
+              {podium.text}
+            </span>
+          )}
+          <span class="text-xs font-mono bg-surface/50 text-subtle border border-surface px-2.5 py-1 rounded-md">
+            {isCoreLab ? "Core Lab System" : `Exhibition Entry (${project.year})`}
+          </span>
+        </div>
+
+        <h1 class="text-3xl md:text-5xl font-extrabold text-text tracking-tight mb-4 leading-tight">
+          {project.title}
+        </h1>
+        
+        <p class="text-base md:text-lg text-primary font-mono font-medium max-w-3xl">
+          Lead Investigator: {project.lead}
+        </p>
+      </header>
+
+      <!-- Main Layout Content Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div class="lg:col-span-2 space-y-10">
+          <!-- Executive Summary Section -->
+          <section class="space-y-3">
+            <h2 class="text-xs font-bold font-mono uppercase tracking-widest text-subtle">
+              System Description Overview
+            </h2>
+            <p class="text-muted leading-relaxed text-base font-normal whitespace-pre-line">
+              {project.description}
+            </p>
+          </section>
+
+          <!-- Gallery Grid (Only renders if gallery images exist) -->
+          {project.gallery && project.gallery.length > 0 && (
+            <section class="space-y-4">
+              <h2 class="text-xs font-bold font-mono uppercase tracking-widest text-subtle">
+                Technical Blueprint & Progress Gallery
+              </h2>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {project.gallery.map((img, idx) => (
+                  <div class="aspect-video rounded-xl bg-secondary/40 border border-surface overflow-hidden relative group">
+                    <img 
+                      src={img} 
+                      alt={`Gallery view snapshot ${idx + 1}`}
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          <!-- Conditional Launch Button Framework -->
+          {project.liveUrl && project.liveUrl.trim() !== "" && (
+            <div class="pt-4">
+              <a 
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-2 bg-primary text-background font-semibold px-6 py-3 rounded-xl hover:bg-primary/90 transition-all duration-200 shadow-lg shadow-primary/5 group"
+              >
+                Launch Active Deployment
+                <svg class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"></path>
+                </svg>
+              </a>
+            </div>
+          )}
+        </div>
+
+        <!-- Right Side Meta Parameters Widget Box -->
+        <aside class="space-y-6">
+          <div class="bg-secondary/40 border border-surface/80 rounded-2xl p-6 space-y-4">
+            <h3 class="text-xs font-bold font-mono uppercase tracking-widest text-subtle border-b border-surface/60 pb-2">
+              System Telemetry Metadata
+            </h3>
+            
+            <div>
+              <span class="block text-[10px] font-mono text-subtle uppercase">Temporal Mapping</span>
+              <span class="text-sm font-medium text-text">
+                {isCoreLab ? `Initiated ${project.startDate}` : `Exhibited Calendar Year ${project.year}`}
+              </span>
+            </div>
+
+            <div>
+              <span class="block text-[10px] font-mono text-subtle uppercase">Host Institution Affiliation</span>
+              <span class="text-sm font-medium text-text">CONCES ATBU Lab Node</span>
+            </div>
+
+            <div>
+              <span class="block text-[10px] font-mono text-subtle uppercase">Repository Status Identification</span>
+              <span class="text-sm font-medium text-text font-mono text-xs">
+                {isCoreLab ? "Stealth Lab Development" : `Archive Log Module #${project.id}`}
+              </span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </div>
+</MainLayout>

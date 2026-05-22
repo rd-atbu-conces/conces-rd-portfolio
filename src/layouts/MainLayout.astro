@@ -1,0 +1,62 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title?: string;
+}
+
+const { title = 'CONCES ATBU R&D' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-background text-text font-sans antialiased selection:bg-primary/30 selection:text-white">
+    <Navbar />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  /* Inject Tailwind directives if not already handled by your astro.config */
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer base {
+    body {
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      @apply font-display font-bold tracking-tight text-text;
+    }
+
+    a {
+      @apply text-inherit no-underline transition-colors duration-300 ease-in-out;
+    }
+
+    button {
+      @apply cursor-pointer transition-all duration-300 ease-in-out;
+    }
+  }
+
+  /* Custom utility for modern R&D glassmorphism styling if needed later */
+  .glass-card {
+    @apply bg-secondary/80 backdrop-blur-md border border-surface/50;
+  }
+</style>

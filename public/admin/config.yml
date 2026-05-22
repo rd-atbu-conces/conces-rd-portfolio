@@ -1,0 +1,75 @@
+backend:
+  name: github
+  repo: your-username/conces-rd-portfolio # Change to your actual GitHub path
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/conces-rd-portfolio/images"
+
+collections:
+  # 1. ANNUAL EXHIBITION DIRECTORY PANEL (Saves to your single 2026.json array file)
+  - name: "exhibition_archive"
+    label: "Exhibition Submissions Archives"
+    files:
+      - file: "src/content/projects/exhibition-projects/2026.json"
+        label: "Exhibition Submissions (2026 Batch)"
+        name: "exhibition_2026"
+        format: "json"
+        fields:
+          - label: "Projects List Matrix"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "Project ID Code", name: "id", widget: "string", hint: "e.g., p2026-01" }
+              - { label: "Project Title", name: "title", widget: "string" }
+              - { label: "Research Investigator / Lead", name: "lead", widget: "string" }
+              - { label: "Exhibition Year", name: "year", widget: "number", default: 2026 }
+              - { label: "Domain Domain Domain Category", name: "category", widget: "string" }
+              - { label: "Evaluation Phase Status", name: "status", widget: "select", options: ["Finalist", "Prototype", "Active Research"] }
+              - { label: "Podium Ranking", name: "podiumRank", widget: "select", options: [{label: "Participant (0)", value: 0}, {label: "1st Place Grand Laureate", value: 1}, {label: "2nd Place Distinguished Innovator", value: 2}, {label: "3rd Place Technical Excellence", value: 3}], default: 0 }
+              - { label: "Show in Homepage Spotlight Marquee?", name: "isSpotlight", widget: "boolean", default: true }
+              - { label: "Executive Summary Description", name: "description", widget: "text" }
+              - { label: "Main Showcase Photo", name: "mainImage", widget: "image", required: false }
+              - { label: "Technical Progress Gallery", name: "gallery", widget: "list", field: {label: "Image Path", widget: "image"}, required: false }
+              - { label: "Live Deployment Project URL (Optional)", name: "liveUrl", widget: "string", required: false, hint: "Can be added later once deployment shifts out of stealth development." }
+
+  # 2. CORE STANDALONE LABORATORY SYSTEMS (Saves as individual .json files like Humidifier)
+  - name: "core_projects"
+    label: "Core Laboratory System Projects"
+    folder: "src/content/projects/projects"
+    create: true
+    slug: "{{fields.id}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Project ID Slug", name: "id", widget: "string", hint: "Lower-case URL friendly, no spaces. e.g., ultrasonic-humidifier" }
+      - { label: "Core Project Title", name: "title", widget: "string" }
+      - { label: "Principal Investigator / Lead", name: "lead", widget: "string" }
+      - { label: "Initiation Date", name: "startDate", widget: "date" }
+      - { label: "Scientific Domain", name: "category", widget: "string" }
+      - { label: "Development Phase", name: "status", widget: "select", options: ["Active Research", "Prototype Completed", "Production Scaling"] }
+      - { label: "Detailed System Description", name: "description", widget: "text" }
+      - { label: "Main Structural Image", name: "mainImage", widget: "image", required: false }
+      - { label: "System CAD / Blueprint Gallery", name: "gallery", widget: "list", field: {label: "Image Path", widget: "image"}, required: false }
+      - { label: "Live System Link / Git Repo (Optional)", name: "liveUrl", widget: "string", required: false }
+
+  # 3. TEAM ROSTER REPOSITORY DIRECTORY (Saves to your single members.json array file)
+  - name: "team_directory"
+    label: "Team Directory Settings"
+    files:
+      - file: "src/content/team/members.json"
+        label: "Manage Team Members Roster"
+        name: "members_list"
+        format: "json"
+        fields:
+          - label: "Team Members List"
+            name: "members"
+            widget: "list"
+            fields:
+              - { label: "Member ID Code", name: "id", widget: "string" }
+              - { label: "Full Name Name", name: "name", widget: "string" }
+              - { label: "Official Role Position", name: "role", widget: "string" }
+              - { label: "Active Batch Year", name: "batchYear", widget: "number", default: 2026 }
+              - { label: "Staff Designation Type", name: "type", widget: "select", options: ["Leadership", "R&D Fellow", "Contributor"] }
+              - { label: "Initials Identifier", name: "initials", widget: "string" }
+              - { label: "Profile Avatar Photo (Optional)", name: "avatar", widget: "image", required: false }

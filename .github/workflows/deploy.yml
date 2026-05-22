@@ -1,0 +1,52 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Set Up Node.js Engine
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Configure GitHub Pages Context
+        uses: actions/configure-pages@v5
+
+      - name: Clean Install Dependencies
+        run: npm ci --legacy-peer-deps
+
+      - name: Compile Production Static Site
+        run: npm run build
+
+      - name: Bundle Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Execute Live Deployment
+        id: deployment # Placed explicitly on the active deploy step so outputs route properly
+        uses: actions/deploy-pages@v4

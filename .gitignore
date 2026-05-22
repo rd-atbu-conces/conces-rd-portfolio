@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Production build output
+dist/
+.git/
+
+# Local environment configuration or logs
+.astro/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

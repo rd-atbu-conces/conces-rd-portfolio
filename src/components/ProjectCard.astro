@@ -1,0 +1,82 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  lead: string;
+  category: string;
+  status: string;
+  description: string;
+  isSpotlight?: boolean;
+}
+
+const { id, title, lead, category, status, description, isSpotlight = false } = Astro.props;
+
+// Contextual dynamic color tags based on your updated config file variables
+const statusStyles: Record<string, string> = {
+  'Finalist': 'bg-accent/10 text-accent border border-accent/20',
+  'Prototype': 'bg-primary/10 text-primary border border-primary/20',
+  'Active Research': 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20',
+};
+
+const statusStyle = statusStyles[status] || 'bg-muted/10 text-muted border border-muted/20';
+
+// Optional dynamic pattern generator based on ID string to serve as an abstract technical card graphic
+const gradientSeed = typeof id === 'string' ? id.charCodeAt(0) % 3 : 0;
+const visualGradients = [
+  'from-primary/20 via-surface to-transparent',
+  'from-accent/20 via-surface to-transparent',
+  'from-emerald-500/20 via-surface to-transparent'
+];
+const chosenGradient = visualGradients[gradientSeed];
+---
+
+<div
+  class="bg-secondary/40 backdrop-blur-sm border border-surface/80 rounded-2xl p-6 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 transition-all duration-300 group flex flex-col justify-between h-full relative overflow-hidden cursor-pointer"
+  data-project-id={id}
+>
+  <!-- Subtle decorative technical grid pattern background -->
+  <div class={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl ${chosenGradient} opacity-40 group-hover:opacity-70 transition-opacity pointer-events-none rounded-bl-full`}></div>
+
+  <div class="relative z-10 flex-1">
+    <!-- Card Top Badges Row -->
+    <div class="flex justify-between items-center mb-4 gap-2">
+      <span class="text-[11px] font-mono tracking-wider text-subtle uppercase">
+        {category}
+      </span>
+      
+      {isSpotlight && (
+        <span class="bg-primary/10 text-primary border border-primary/30 px-2.5 py-0.5 rounded-full text-[10px] font-bold tracking-widest uppercase">
+          SPOTLIGHT
+        </span>
+      )}
+    </div>
+
+    <!-- Title and Lead -->
+    <h3 class="text-xl font-bold text-text tracking-tight mb-2 group-hover:text-primary transition-colors duration-200">
+      {title}
+    </h3>
+    
+    <p class="text-xs font-medium text-primary/80 mb-4 font-mono">
+      {lead}
+    </p>
+
+    <!-- Description -->
+    <p class="text-subtle text-sm leading-relaxed line-clamp-3 mb-6">
+      {description}
+    </p>
+  </div>
+
+  <!-- Card Footer Status Badges Row -->
+  <div class="flex items-center justify-between mt-auto pt-4 border-t border-surface/40 relative z-10">
+    <span class={`px-2.5 py-1 rounded-md text-xs font-semibold tracking-wide ${statusStyle}`}>
+      {status}
+    </span>
+    
+    <!-- Decorative forward button hint -->
+    <span class="text-subtle group-hover:text-primary transition-colors duration-200">
+      <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+      </svg>
+    </span>
+  </div>
+</div>
