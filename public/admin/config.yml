@@ -1,7 +1,8 @@
 backend:
   name: github
-  repo: rd-atbu-conces/conces-rd-portfolio # Ensure this matches your exact GitHub user/repo
+  repo: rd-atbu-conces/conces-rd-portfolio
   branch: main
+  site_id: fedd84ec-531d-473e-951c-ca244cbc2193 # Paste your unique Site ID here
 
 media_folder: "public/images"
 public_folder: "/conces-rd-portfolio/images"
