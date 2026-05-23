@@ -1,7 +1,10 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
-import projectsData from '../content/projects/exhibition-projects/2026.json';
+import exhibitionData from '../content/projects/exhibition-projects/2026.json';
+
+// FIX: Target the inner matrix array cleanly, or fall back to an empty array shell
+const projectsData = exhibitionData?.projects || [];
 
 const spotlightProjects = projectsData.filter(p => p.isSpotlight === true);
 ---
