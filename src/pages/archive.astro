@@ -2,10 +2,12 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 
-import exhibitionProjects from '../content/projects/exhibition-projects/2026.json';
+import exhibitionData from '../content/projects/exhibition-projects/2026.json';
+
+const exhibitionProjects = exhibitionData?.projects || [];
+
 const coreProjects = await Astro.glob('../content/projects/projects/*.json');
 ---
-
 <MainLayout title="CONCES ATBU R&D - Directory Archive">
   <!-- Header Branding Section -->
   <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-secondary/30 border-b border-surface/40 relative overflow-hidden">
