@@ -1,24 +1,31 @@
 ---
 import MainLayout from '../../layouts/MainLayout.astro';
 
-// 1. Gather all data sources for compilation mapping
-import exhibitionArray from '../../content/projects/exhibition-projects/2026.json';
+// 1. Import your array-wrapped Exhibition JSON data
+import exhibitionData from '../../content/projects/exhibition-projects/2026.json';
 
 export async function getStaticPaths() {
-  // Source A: Parse the individual Core Lab project files cleanly
+  // Source A: Parse individual Core Lab JSON module files cleanly
   const coreFiles = await Astro.glob('../../../src/content/projects/projects/*.json');
-  const corePaths = coreFiles.map((file) => ({
-    params: { id: String(file.id) },
-    props: { project: file, isCoreLab: true },
-  }));
+  
+  const corePaths = coreFiles.map((file) => {
+    // Astro.glob returns module definitions; use properties directly or via fallback fields
+    const projectData = file.default || file;
+    return {
+      params: { id: String(projectData.id) },
+      props: { project: projectData, isCoreLab: true },
+    };
+  });
 
-  // Source B: Parse the array-based Exhibition files tracking lists
-  const exhibitionPaths = exhibitionArray.map((project) => ({
+  // Source B: Drill down explicitly to your newly wrapped Sveltia list matrix array
+  const rawExhibitionList = exhibitionData?.projects || [];
+  
+  const exhibitionPaths = rawExhibitionList.map((project) => ({
     params: { id: String(project.id) },
     props: { project, isCoreLab: false },
   }));
 
-  // Combine both pipelines into a single static routing map
+  // Combine both data arrays safely into a single dynamic routing pipeline
   return [...corePaths, ...exhibitionPaths];
 }
 
@@ -29,9 +36,9 @@ interface ProjectSchema {
   category: string;
   status: string;
   description: string;
-  year?: number;
+  year?: string | number; // Fallback helper to safely support string or numerical variants
   startDate?: string;
-  podiumRank?: number;
+  podiumRank?: string | number;
   mainImage?: string;
   gallery?: string[];
   liveUrl?: string;
@@ -40,12 +47,14 @@ interface ProjectSchema {
 const { project, isCoreLab } = Astro.props as { project: ProjectSchema; isCoreLab: boolean };
 
 // Dynamic Podium Styling Matrix
-const podiumConfigs: Record<number, { text: string; styles: string }> = {
-  1: { text: "Grand Laureate (1st Place)", styles: "bg-amber-500/10 text-amber-400 border-amber-500/30" },
-  2: { text: "Distinguished Innovator (2nd Place)", styles: "bg-slate-300/10 text-slate-300 border-slate-300/30" },
-  3: { text: "Technical Excellence (3rd Place)", styles: "bg-amber-700/10 text-amber-600 border-amber-700/30" }
+const podiumConfigs: Record<string | number, { text: string; styles: string }> = {
+  "1": { text: "Grand Laureate (1st Place)", styles: "bg-amber-500/10 text-amber-400 border-amber-500/30" },
+  "2": { text: "Distinguished Innovator (2nd Place)", styles: "bg-slate-300/10 text-slate-300 border-slate-300/30" },
+  "3": { text: "Technical Excellence (3rd Place)", styles: "bg-amber-700/10 text-amber-600 border-amber-700/30" }
 };
-const podium = project.podiumRank ? podiumConfigs[project.podiumRank] : null;
+// Use string parsing conversion to guarantee both "1" and 1 catch the criteria rule perfectly
+const currentRankKey = project.podiumRank !== undefined ? String(project.podiumRank) : "";
+const podium = podiumConfigs[currentRankKey] || null;
 
 // Baseline contextual tag colors matching your design tokens
 const statusStyles: Record<string, string> = {
