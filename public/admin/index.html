@@ -7,5 +7,25 @@
   </head>
   <body>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      // Force manual configuration to override any automatic defaults
+      CMS.init({
+        config: {
+          backend: {
+            name: "github",
+            repo: "rd-atbu-conces/conces-rd-portfolio",
+            branch: "main",
+            auth_type: "implicit",
+            app_id: "Ov23liH0eIYa850dRSGR"
+          },
+          media_folder: "public/images",
+          public_folder: "/conces-rd-portfolio/images",
+          collections: [
+            // Ensure you copy your collections array here exactly as it is in your config.yml
+            // This ensures the CMS loads your collections instantly.
+          ]
+        }
+      });
+    </script>
   </body>
 </html>
