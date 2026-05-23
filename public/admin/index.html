@@ -3,13 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Content Manager</title>
+    <title>Admin Panel</title>
     <link rel="stylesheet" href="https://unpkg.com/@staticcms/core@^4.0.0/dist/main.css" />
   </head>
   <body>
+    <script src="https://unpkg.com/react@^18.0.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@^18.0.0/umd/react-dom.production.min.js"></script>
+
     <script src="https://unpkg.com/@staticcms/core@^4.0.0/dist/static-cms-core.js"></script>
+    
     <script>
-      // Static CMS uses StaticCMS.init, not CMS.init
+      // Now that React is loaded, window.StaticCMS will be defined correctly
       window.StaticCMS.init({
         config: {
           config_url: "/conces-rd-portfolio/admin/config.yml",
