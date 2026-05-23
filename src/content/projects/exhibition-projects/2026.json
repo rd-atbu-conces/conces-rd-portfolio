@@ -1,613 +1,615 @@
-[
-  {
-    "id": "p2026-01",
-    "title": "AI-Powered Predictive Maintenance System",
-    "lead": "Dr. Amara Okafor",
-    "year": 2026,
-    "category": "AI/ML",
-    "status": "Finalist",
-    "podiumRank": 1,
-    "isSpotlight": true,
-    "description": "An advanced machine learning system that predicts equipment failures before they occur, reducing downtime by 40% and maintenance costs by 35%.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-02",
-    "title": "Renewable Energy Optimization Platform",
-    "lead": "Eng. Chisom Nwosu",
-    "year": 2026,
-    "category": "Energy",
-    "status": "Finalist",
-    "podiumRank": 2,
-    "isSpotlight": true,
-    "description": "Intelligent platform for optimizing solar and wind energy distribution across grid networks using real-time data analytics.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-03",
-    "title": "Blockchain-Based Supply Chain Tracker",
-    "lead": "Prof. Adeyemi Bello",
-    "year": 2026,
-    "category": "Blockchain",
-    "status": "Finalist",
-    "podiumRank": 3,
-    "isSpotlight": true,
-    "description": "Decentralized supply chain management system ensuring transparency and authenticity of products from manufacture to consumer.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-04",
-    "title": "Advanced Water Purification Technology",
-    "lead": "Dr. Zainab Ahmed",
-    "year": 2026,
-    "category": "Environmental",
-    "status": "Finalist",
-    "podiumRank": 0,
-    "isSpotlight": true,
-    "description": "Novel nanotechnology-based water purification system capable of removing 99.9% of contaminants and pathogens.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-05",
-    "title": "IoT Smart Agriculture System",
-    "lead": "Eng. Tunde Oladele",
-    "year": 2026,
-    "category": "IoT",
-    "status": "Finalist",
-    "podiumRank": 0,
-    "isSpotlight": true,
-    "description": "Internet of Things platform for precision agriculture, monitoring soil conditions, weather, and crop health in real-time.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-06",
-    "title": "Quantum Computing Simulator",
-    "lead": "Dr. Fatima Suleiman",
-    "year": 2026,
-    "category": "Quantum",
-    "status": "Finalist",
-    "podiumRank": 0,
-    "isSpotlight": true,
-    "description": "High-performance quantum computing simulator enabling research into quantum algorithms without access to physical quantum hardware.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-07",
-    "title": "AI-Driven Healthcare Diagnostics",
-    "lead": "Dr. Oluwaseun Adebayo",
-    "year": 2026,
-    "category": "Healthcare",
-    "status": "Finalist",
-    "podiumRank": 0,
-    "isSpotlight": true,
-    "description": "Machine learning system for early disease detection using medical imaging and patient data analysis with 95% accuracy.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-08",
-    "title": "Autonomous Drone Delivery Network",
-    "lead": "Eng. Chukwu Obi",
-    "year": 2026,
-    "category": "Robotics",
-    "status": "Finalist",
-    "podiumRank": 0,
-    "isSpotlight": true,
-    "description": "Fully autonomous drone fleet management system for last-mile delivery in urban and rural areas.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-09",
-    "title": "Natural Language Processing for Local Languages",
-    "lead": "Dr. Ngozi Eze",
-    "year": 2026,
-    "category": "AI/ML",
-    "status": "Finalist",
-    "podiumRank": 0,
-    "isSpotlight": true,
-    "description": "NLP framework supporting African languages with machine translation, sentiment analysis, and speech recognition capabilities.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-10",
-    "title": "Smart Building Energy Management",
-    "lead": "Eng. Emeka Nkwonta",
-    "year": 2026,
-    "category": "Energy",
-    "status": "Finalist",
-    "podiumRank": 0,
-    "isSpotlight": true,
-    "description": "Integrated building management system optimizing HVAC, lighting, and power consumption through AI-driven automation.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-11",
-    "title": "Cybersecurity Threat Detection Engine",
-    "lead": "Dr. Blessing Okoro",
-    "year": 2026,
-    "category": "Cybersecurity",
-    "status": "Finalist",
-    "podiumRank": 0,
-    "isSpotlight": true,
-    "description": "Real-time threat detection and response system using behavioral analysis and anomaly detection algorithms.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-12",
-    "title": "Biometric Authentication Platform",
-    "lead": "Prof. Adekunle Ajayi",
-    "year": 2026,
-    "category": "Security",
-    "status": "Finalist",
-    "podiumRank": 0,
-    "isSpotlight": true,
-    "description": "Multi-modal biometric authentication system combining fingerprint, facial recognition, and iris scanning.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-13",
-    "title": "3D Bioprinting for Tissue Engineering",
-    "lead": "Dr. Oluwatoyin Adewale",
-    "year": 2026,
-    "category": "Biotech",
-    "status": "Finalist",
-    "podiumRank": 0,
-    "isSpotlight": true,
-    "description": "Advanced 3D bioprinting technology for creating functional human tissue scaffolds for regenerative medicine.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-14",
-    "title": "Distributed Ledger for Land Registry",
-    "lead": "Eng. Ikechukwu Eze",
-    "year": 2026,
-    "category": "Blockchain",
-    "status": "Finalist",
-    "podiumRank": 0,
-    "isSpotlight": true,
-    "description": "Immutable land ownership and transaction records using distributed ledger technology to prevent fraud.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-15",
-    "title": "Climate Resilience Modeling System",
-    "lead": "Dr. Amara Okafor",
-    "year": 2026,
-    "category": "Climate",
-    "status": "Finalist",
-    "podiumRank": 0,
-    "isSpotlight": true,
-    "description": "Predictive climate modeling system for assessing regional climate impacts and developing adaptation strategies.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-16",
-    "title": "Mobile Payment Gateway",
-    "lead": "Eng. Segun Adeyemi",
-    "year": 2026,
-    "category": "FinTech",
-    "status": "Prototype",
-    "podiumRank": 0,
-    "isSpotlight": false,
-    "description": "Secure mobile payment solution for financial inclusion in underbanked regions.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-17",
-    "title": "Educational AI Tutoring System",
-    "lead": "Dr. Folake Okonkwo",
-    "year": 2026,
-    "category": "EdTech",
-    "status": "Active Research",
-    "podiumRank": 0,
-    "isSpotlight": false,
-    "description": "Personalized learning platform using AI to adapt educational content to individual student needs.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-18",
-    "title": "Waste Management Optimization",
-    "lead": "Eng. Chinedu Eze",
-    "year": 2026,
-    "category": "Environmental",
-    "status": "Prototype",
-    "podiumRank": 0,
-    "isSpotlight": false,
-    "description": "Smart waste collection and recycling optimization system for urban areas.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-19",
-    "title": "Telemedicine Platform",
-    "lead": "Dr. Nneka Obi",
-    "year": 2026,
-    "category": "Healthcare",
-    "status": "Active Research",
-    "podiumRank": 0,
-    "isSpotlight": false,
-    "description": "Comprehensive telemedicine solution connecting patients with healthcare providers remotely.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-20",
-    "title": "Industrial IoT Monitoring",
-    "lead": "Eng. Taiwo Adeyemi",
-    "year": 2026,
-    "category": "IoT",
-    "status": "Prototype",
-    "podiumRank": 0,
-    "isSpotlight": false,
-    "description": "Real-time monitoring system for industrial equipment performance and maintenance scheduling.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-21",
-    "title": "Virtual Reality Training Simulator",
-    "lead": "Dr. Kayode Oladele",
-    "year": 2026,
-    "category": "VR/AR",
-    "status": "Active Research",
-    "podiumRank": 0,
-    "isSpotlight": false,
-    "description": "Immersive VR training environment for high-risk professions and skill development.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-22",
-    "title": "Carbon Footprint Tracking",
-    "lead": "Eng. Adanna Okafor",
-    "year": 2026,
-    "category": "Sustainability",
-    "status": "Prototype",
-    "podiumRank": 0,
-    "isSpotlight": false,
-    "description": "Personal and corporate carbon footprint calculation and reduction recommendation engine.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },  {
-    "id": "p2026-23",
-    "title": "Precision Agriculture Sensors",
-    "lead": "Dr. Olumide Adeyemi",
-    "year": 2026,
-    "category": "Agriculture",
-    "status": "Active Research",
-    "podiumRank": 0,
-    "isSpotlight": false,
-    "description": "Advanced sensor network for soil health monitoring and crop yield optimization.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-24",
-    "title": "Smart Traffic Management",
-    "lead": "Eng. Chidi Okafor",
-    "year": 2026,
-    "category": "Smart City",
-    "status": "Prototype",
-    "podiumRank": 0,
-    "isSpotlight": false,
-    "description": "AI-powered traffic flow optimization system reducing congestion and emissions.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-25",
-    "title": "Renewable Energy Storage",
-    "lead": "Dr. Zainab Bello",
-    "year": 2026,
-    "category": "Energy",
-    "status": "Active Research",
-    "podiumRank": 0,
-    "isSpotlight": false,
-    "description": "Advanced battery technology for efficient storage of renewable energy.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-26",
-    "title": "Cybersecurity Training Platform",
-    "lead": "Eng. Emeka Eze",
-    "year": 2026,
-    "category": "Cybersecurity",
-    "status": "Prototype",
-    "podiumRank": 0,
-    "isSpotlight": false,
-    "description": "Interactive platform for cybersecurity awareness and skills development.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-27",
-    "title": "Microfinance Management System",
-    "lead": "Dr. Folake Adeyemi",
-    "year": 2026,
-    "category": "FinTech",
-    "status": "Active Research",
-    "podiumRank": 0,
-    "isSpotlight": false,
-    "description": "Digital platform for microfinance operations and customer management.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-28",
-    "title": "Disaster Response Coordination",
-    "lead": "Eng. Segun Okafor",
-    "year": 2026,
-    "category": "Emergency",
-    "status": "Prototype",
-    "podiumRank": 0,
-    "isSpotlight": false,
-    "description": "Real-time coordination platform for disaster response and emergency management.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-29",
-    "title": "Fisheries Management System",
-    "lead": "Dr. Nneka Okonkwo",
-    "year": 2026,
-    "category": "Marine",
-    "status": "Active Research",
-    "podiumRank": 0,
-    "isSpotlight": false,
-    "description": "Sustainable fisheries management system with catch tracking and conservation monitoring.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-30",
-    "title": "Digital Identity Platform",
-    "lead": "Eng. Chukwu Adeyemi",
-    "year": 2026,
-    "category": "Digital",
-    "status": "Prototype",
-    "podiumRank": 0,
-    "isSpotlight": false,
-    "description": "Secure digital identity system for financial and government services.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-31",
-    "title": "Manufacturing Quality Control",
-    "lead": "Dr. Adanna Obi",
-    "year": 2026,
-    "category": "Manufacturing",
-    "status": "Active Research",
-    "podiumRank": 0,
-    "isSpotlight": false,
-    "description": "Computer vision system for real-time quality assurance in manufacturing.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-32",
-    "title": "Smart Water Distribution",
-    "lead": "Eng. Ikechukwu Adeyemi",
-    "year": 2026,
-    "category": "Water",
-    "status": "Prototype",
-    "podiumRank": 0,
-    "isSpotlight": false,
-    "description": "IoT-based water distribution system reducing leakage and optimizing usage.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-33",
-    "title": "Renewable Energy Forecasting",
-    "lead": "Dr. Folake Eze",
-    "year": 2026,
-    "category": "Energy",
-    "status": "Active Research",
-    "podiumRank": 0,
-    "isSpotlight": false,
-    "description": "Machine learning model for predicting solar and wind energy generation.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-34",
-    "title": "Healthcare Supply Chain",
-    "lead": "Eng. Taiwo Okafor",
-    "year": 2026,
-    "category": "Healthcare",
-    "status": "Prototype",
-    "podiumRank": 0,
-    "isSpotlight": false,
-    "description": "Blockchain-based supply chain for pharmaceutical and medical equipment tracking.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-35",
-    "title": "Mental Health Support App",
-    "lead": "Dr. Ngozi Adeyemi",
-    "year": 2026,
-    "category": "Healthcare",
-    "status": "Active Research",
-    "podiumRank": 0,
-    "isSpotlight": false,
-    "description": "Mobile application providing mental health support and counseling services.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  },
-  {
-    "id": "p2026-36",
-    "title": "Agricultural Cooperative Platform",
-    "lead": "Eng. Chinedu Obi",
-    "year": 2026,
-    "category": "Agriculture",
-    "status": "Prototype",
-    "podiumRank": 0,
-    "isSpotlight": false,
-    "description": "Digital platform connecting farmers to markets and resources for collective benefit.",
-    "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
-    "gallery": [
-      "/conces-rd-portfolio/images/bts1.jpg",
-      "/conces-rd-portfolio/images/bts2.jpg"
-    ],
-    "liveUrl": ""
-  }
-] 
+{
+  "projects": [
+    {
+      "id": "p2026-01",
+      "title": "AI-Powered Predictive Maintenance System",
+      "lead": "Dr. Amara Okafor",
+      "year": 2026,
+      "category": "AI/ML",
+      "status": "Finalist",
+      "podiumRank": 1,
+      "isSpotlight": true,
+      "description": "An advanced machine learning system that predicts equipment failures before they occur, reducing downtime by 40% and maintenance costs by 35%.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-02",
+      "title": "Renewable Energy Optimization Platform",
+      "lead": "Eng. Chisom Nwosu",
+      "year": 2026,
+      "category": "Energy",
+      "status": "Finalist",
+      "podiumRank": 2,
+      "isSpotlight": true,
+      "description": "Intelligent platform for optimizing solar and wind energy distribution across grid networks using real-time data analytics.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-03",
+      "title": "Blockchain-Based Supply Chain Tracker",
+      "lead": "Prof. Adeyemi Bello",
+      "year": 2026,
+      "category": "Blockchain",
+      "status": "Finalist",
+      "podiumRank": 3,
+      "isSpotlight": true,
+      "description": "Decentralized supply chain management system ensuring transparency and authenticity of products from manufacture to consumer.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-04",
+      "title": "Advanced Water Purification Technology",
+      "lead": "Dr. Zainab Ahmed",
+      "year": 2026,
+      "category": "Environmental",
+      "status": "Finalist",
+      "podiumRank": 0,
+      "isSpotlight": true,
+      "description": "Novel nanotechnology-based water purification system capable of removing 99.9% of contaminants and pathogens.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-05",
+      "title": "IoT Smart Agriculture System",
+      "lead": "Eng. Tunde Oladele",
+      "year": 2026,
+      "category": "IoT",
+      "status": "Finalist",
+      "podiumRank": 0,
+      "isSpotlight": true,
+      "description": "Internet of Things platform for precision agriculture, monitoring soil conditions, weather, and crop health in real-time.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-06",
+      "title": "Quantum Computing Simulator",
+      "lead": "Dr. Fatima Suleiman",
+      "year": 2026,
+      "category": "Quantum",
+      "status": "Finalist",
+      "podiumRank": 0,
+      "isSpotlight": true,
+      "description": "High-performance quantum computing simulator enabling research into quantum algorithms without access to physical quantum hardware.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-07",
+      "title": "AI-Driven Healthcare Diagnostics",
+      "lead": "Dr. Oluwaseun Adebayo",
+      "year": 2026,
+      "category": "Healthcare",
+      "status": "Finalist",
+      "podiumRank": 0,
+      "isSpotlight": true,
+      "description": "Machine learning system for early disease detection using medical imaging and patient data analysis with 95% accuracy.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-08",
+      "title": "Autonomous Drone Delivery Network",
+      "lead": "Eng. Chukwu Obi",
+      "year": 2026,
+      "category": "Robotics",
+      "status": "Finalist",
+      "podiumRank": 0,
+      "isSpotlight": true,
+      "description": "Fully autonomous drone fleet management system for last-mile delivery in urban and rural areas.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-09",
+      "title": "Natural Language Processing for Local Languages",
+      "lead": "Dr. Ngozi Eze",
+      "year": 2026,
+      "category": "AI/ML",
+      "status": "Finalist",
+      "podiumRank": 0,
+      "isSpotlight": true,
+      "description": "NLP framework supporting African languages with machine translation, sentiment analysis, and speech recognition capabilities.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-10",
+      "title": "Smart Building Energy Management",
+      "lead": "Eng. Emeka Nkwonta",
+      "year": 2026,
+      "category": "Energy",
+      "status": "Finalist",
+      "podiumRank": 0,
+      "isSpotlight": true,
+      "description": "Integrated building management system optimizing HVAC, lighting, and power consumption through AI-driven automation.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-11",
+      "title": "Cybersecurity Threat Detection Engine",
+      "lead": "Dr. Blessing Okoro",
+      "year": 2026,
+      "category": "Cybersecurity",
+      "status": "Finalist",
+      "podiumRank": 0,
+      "isSpotlight": true,
+      "description": "Real-time threat detection and response system using behavioral analysis and anomaly detection algorithms.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-12",
+      "title": "Biometric Authentication Platform",
+      "lead": "Prof. Adekunle Ajayi",
+      "year": 2026,
+      "category": "Security",
+      "status": "Finalist",
+      "podiumRank": 0,
+      "isSpotlight": true,
+      "description": "Multi-modal biometric authentication system combining fingerprint, facial recognition, and iris scanning.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-13",
+      "title": "3D Bioprinting for Tissue Engineering",
+      "lead": "Dr. Oluwatoyin Adewale",
+      "year": 2026,
+      "category": "Biotech",
+      "status": "Finalist",
+      "podiumRank": 0,
+      "isSpotlight": true,
+      "description": "Advanced 3D bioprinting technology for creating functional human tissue scaffolds for regenerative medicine.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-14",
+      "title": "Distributed Ledger for Land Registry",
+      "lead": "Eng. Ikechukwu Eze",
+      "year": 2026,
+      "category": "Blockchain",
+      "status": "Finalist",
+      "podiumRank": 0,
+      "isSpotlight": true,
+      "description": "Immutable land ownership and transaction records using distributed ledger technology to prevent fraud.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-15",
+      "title": "Climate Resilience Modeling System",
+      "lead": "Dr. Amara Okafor",
+      "year": 2026,
+      "category": "Climate",
+      "status": "Finalist",
+      "podiumRank": 0,
+      "isSpotlight": true,
+      "description": "Predictive climate modeling system for assessing regional climate impacts and developing adaptation strategies.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-16",
+      "title": "Mobile Payment Gateway",
+      "lead": "Eng. Segun Adeyemi",
+      "year": 2026,
+      "category": "FinTech",
+      "status": "Prototype",
+      "podiumRank": 0,
+      "isSpotlight": false,
+      "description": "Secure mobile payment solution for financial inclusion in underbanked regions.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-17",
+      "title": "Educational AI Tutoring System",
+      "lead": "Dr. Folake Okonkwo",
+      "year": 2026,
+      "category": "EdTech",
+      "status": "Active Research",
+      "podiumRank": 0,
+      "isSpotlight": false,
+      "description": "Personalized learning platform using AI to adapt educational content to individual student needs.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-18",
+      "title": "Waste Management Optimization",
+      "lead": "Eng. Chinedu Eze",
+      "year": 2026,
+      "category": "Environmental",
+      "status": "Prototype",
+      "podiumRank": 0,
+      "isSpotlight": false,
+      "description": "Smart waste collection and recycling optimization system for urban areas.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-19",
+      "title": "Telemedicine Platform",
+      "lead": "Dr. Nneka Obi",
+      "year": 2026,
+      "category": "Healthcare",
+      "status": "Active Research",
+      "podiumRank": 0,
+      "isSpotlight": false,
+      "description": "Comprehensive telemedicine solution connecting patients with healthcare providers remotely.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-20",
+      "title": "Industrial IoT Monitoring",
+      "lead": "Eng. Taiwo Adeyemi",
+      "year": 2026,
+      "category": "IoT",
+      "status": "Prototype",
+      "podiumRank": 0,
+      "isSpotlight": false,
+      "description": "Real-time monitoring system for industrial equipment performance and maintenance scheduling.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-21",
+      "title": "Virtual Reality Training Simulator",
+      "lead": "Dr. Kayode Oladele",
+      "year": 2026,
+      "category": "VR/AR",
+      "status": "Active Research",
+      "podiumRank": 0,
+      "isSpotlight": false,
+      "description": "Immersive VR training environment for high-risk professions and skill development.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-22",
+      "title": "Carbon Footprint Tracking",
+      "lead": "Eng. Adanna Okafor",
+      "year": 2026,
+      "category": "Sustainability",
+      "status": "Prototype",
+      "podiumRank": 0,
+      "isSpotlight": false,
+      "description": "Personal and corporate carbon footprint calculation and reduction recommendation engine.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },  {
+      "id": "p2026-23",
+      "title": "Precision Agriculture Sensors",
+      "lead": "Dr. Olumide Adeyemi",
+      "year": 2026,
+      "category": "Agriculture",
+      "status": "Active Research",
+      "podiumRank": 0,
+      "isSpotlight": false,
+      "description": "Advanced sensor network for soil health monitoring and crop yield optimization.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-24",
+      "title": "Smart Traffic Management",
+      "lead": "Eng. Chidi Okafor",
+      "year": 2026,
+      "category": "Smart City",
+      "status": "Prototype",
+      "podiumRank": 0,
+      "isSpotlight": false,
+      "description": "AI-powered traffic flow optimization system reducing congestion and emissions.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-25",
+      "title": "Renewable Energy Storage",
+      "lead": "Dr. Zainab Bello",
+      "year": 2026,
+      "category": "Energy",
+      "status": "Active Research",
+      "podiumRank": 0,
+      "isSpotlight": false,
+      "description": "Advanced battery technology for efficient storage of renewable energy.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-26",
+      "title": "Cybersecurity Training Platform",
+      "lead": "Eng. Emeka Eze",
+      "year": 2026,
+      "category": "Cybersecurity",
+      "status": "Prototype",
+      "podiumRank": 0,
+      "isSpotlight": false,
+      "description": "Interactive platform for cybersecurity awareness and skills development.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-27",
+      "title": "Microfinance Management System",
+      "lead": "Dr. Folake Adeyemi",
+      "year": 2026,
+      "category": "FinTech",
+      "status": "Active Research",
+      "podiumRank": 0,
+      "isSpotlight": false,
+      "description": "Digital platform for microfinance operations and customer management.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-28",
+      "title": "Disaster Response Coordination",
+      "lead": "Eng. Segun Okafor",
+      "year": 2026,
+      "category": "Emergency",
+      "status": "Prototype",
+      "podiumRank": 0,
+      "isSpotlight": false,
+      "description": "Real-time coordination platform for disaster response and emergency management.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-29",
+      "title": "Fisheries Management System",
+      "lead": "Dr. Nneka Okonkwo",
+      "year": 2026,
+      "category": "Marine",
+      "status": "Active Research",
+      "podiumRank": 0,
+      "isSpotlight": false,
+      "description": "Sustainable fisheries management system with catch tracking and conservation monitoring.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-30",
+      "title": "Digital Identity Platform",
+      "lead": "Eng. Chukwu Adeyemi",
+      "year": 2026,
+      "category": "Digital",
+      "status": "Prototype",
+      "podiumRank": 0,
+      "isSpotlight": false,
+      "description": "Secure digital identity system for financial and government services.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-31",
+      "title": "Manufacturing Quality Control",
+      "lead": "Dr. Adanna Obi",
+      "year": 2026,
+      "category": "Manufacturing",
+      "status": "Active Research",
+      "podiumRank": 0,
+      "isSpotlight": false,
+      "description": "Computer vision system for real-time quality assurance in manufacturing.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-32",
+      "title": "Smart Water Distribution",
+      "lead": "Eng. Ikechukwu Adeyemi",
+      "year": 2026,
+      "category": "Water",
+      "status": "Prototype",
+      "podiumRank": 0,
+      "isSpotlight": false,
+      "description": "IoT-based water distribution system reducing leakage and optimizing usage.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-33",
+      "title": "Renewable Energy Forecasting",
+      "lead": "Dr. Folake Eze",
+      "year": 2026,
+      "category": "Energy",
+      "status": "Active Research",
+      "podiumRank": 0,
+      "isSpotlight": false,
+      "description": "Machine learning model for predicting solar and wind energy generation.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-34",
+      "title": "Healthcare Supply Chain",
+      "lead": "Eng. Taiwo Okafor",
+      "year": 2026,
+      "category": "Healthcare",
+      "status": "Prototype",
+      "podiumRank": 0,
+      "isSpotlight": false,
+      "description": "Blockchain-based supply chain for pharmaceutical and medical equipment tracking.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-35",
+      "title": "Mental Health Support App",
+      "lead": "Dr. Ngozi Adeyemi",
+      "year": 2026,
+      "category": "Healthcare",
+      "status": "Active Research",
+      "podiumRank": 0,
+      "isSpotlight": false,
+      "description": "Mobile application providing mental health support and counseling services.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    },
+    {
+      "id": "p2026-36",
+      "title": "Agricultural Cooperative Platform",
+      "lead": "Eng. Chinedu Obi",
+      "year": 2026,
+      "category": "Agriculture",
+      "status": "Prototype",
+      "podiumRank": 0,
+      "isSpotlight": false,
+      "description": "Digital platform connecting farmers to markets and resources for collective benefit.",
+      "mainImage": "/conces-rd-portfolio/images/placeholder.jpg",
+      "gallery": [
+        "/conces-rd-portfolio/images/bts1.jpg",
+        "/conces-rd-portfolio/images/bts2.jpg"
+      ],
+      "liveUrl": ""
+    }
+  ]
+}
