@@ -4,20 +4,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content Manager</title>
+    <!-- Modern Sveltia script replacing Decap -->
+    <script src="https://unpkg.com" type="module"></script>
   </head>
   <body>
-    <!-- Decap CMS Core Script -->
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
     <script>
-      // Fixed: Using window.CMS.init instead of initCMS
       window.CMS.init({
         config: {
           backend: {
             name: "github",
             repo: "rd-atbu-conces/conces-rd-portfolio",
-            branch: "main",
-            auth_type: "implicit",
-            app_id: "Ov23liH0eIYa850dRSGR"
+            branch: "main"
           },
           media_folder: "public/images",
           public_folder: "/conces-rd-portfolio/images",
@@ -36,7 +33,6 @@
                       label: "Projects List Matrix",
                       name: "projects",
                       widget: "list",
-                      // Fixed: Removed nested object field to make parsing robust
                       fields: [
                         { label: "Project ID Code", name: "id", widget: "string" },
                         { label: "Project Title", name: "title", widget: "string" },
@@ -89,7 +85,6 @@
                       label: "Team Members",
                       name: "members",
                       widget: "list",
-                      // Fixed: Cleaned up nested object definitions
                       fields: [
                         { label: "Member ID", name: "id", widget: "string" },
                         { label: "Full Name", name: "name", widget: "string" },
