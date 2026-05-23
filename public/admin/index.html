@@ -4,16 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content Manager</title>
+    <link rel="stylesheet" href="https://unpkg.com/@staticcms/core@^4.0.0/dist/main.css" />
   </head>
   <body>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script src="https://unpkg.com/@staticcms/core@^4.0.0/dist/static-cms-core.js"></script>
     <script>
-      CMS.init({
+      window.CMS.init({
         config: {
-          // 1. Tell Decap exactly where its own configuration file lives
           config_url: "/conces-rd-portfolio/admin/config.yml",
-          
-          // 2. Your backend configuration block
           backend: {
             name: "github",
             repo: "rd-atbu-conces/conces-rd-portfolio",
