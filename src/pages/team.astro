@@ -1,11 +1,14 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import teamData from '../content/team/members.json';
+import TeamCard from '../components/TeamCard.astro';
 
-const leadership = teamData.filter(m => m.type === 'Leadership');
-const fellows = teamData.filter(m => m.type === 'R&D Fellow');
-const contributors = teamData.filter(m => m.type === 'Contributor');
+// Import your array-wrapped Team JSON data
+import teamDataRaw from '../content/team/members.json';
+
+// FIX: Explicitly target the inner members array list, or fall back to an empty array so filter never panics
+const teamData = teamDataRaw?.members || [];
 ---
+
 
 <MainLayout title="CONCES ATBU R&D - Team">
   <!-- Header Section -->
