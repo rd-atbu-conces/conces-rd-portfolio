@@ -1,182 +1,184 @@
-[
-  {
-    "id": "tm-001",
-    "name": "Prof. Adeyemi Bello",
-    "role": "Director, R&D Initiative",
-    "batchYear": 2026,
-    "type": "Leadership",
-    "initials": "AB",
-    "avatar": ""
-  },
-  {
-    "id": "tm-002",
-    "name": "Dr. Amara Okafor",
-    "role": "Head of AI/ML Research",
-    "batchYear": 2026,
-    "type": "Leadership",
-    "initials": "AO",
-    "avatar": ""
-  },
-  {
-    "id": "tm-003",
-    "name": "Eng. Chisom Nwosu",
-    "role": "Lead Energy Systems Engineer",
-    "batchYear": 2026,
-    "type": "Leadership",
-    "initials": "CN",
-    "avatar": ""
-  },
-  {
-    "id": "tm-004",
-    "name": "Dr. Zainab Ahmed",
-    "role": "Environmental Technology Lead",
-    "batchYear": 2026,
-    "type": "Leadership",
-    "initials": "ZA",
-    "avatar": ""
-  },
-  {
-    "id": "tm-005",
-    "name": "Eng. Tunde Oladele",
-    "role": "IoT Systems Architect",
-    "batchYear": 2026,
-    "type": "R&D Fellow",
-    "initials": "TO",
-    "avatar": ""
-  },
-  {
-    "id": "tm-006",
-    "name": "Dr. Fatima Suleiman",
-    "role": "Quantum Computing Researcher",
-    "batchYear": 2026,
-    "type": "R&D Fellow",
-    "initials": "FS",
-    "avatar": ""
-  },
-  {
-    "id": "tm-007",
-    "name": "Dr. Oluwaseun Adebayo",
-    "role": "Healthcare AI Specialist",
-    "batchYear": 2026,
-    "type": "R&D Fellow",
-    "initials": "OA",
-    "avatar": ""
-  },
-  {
-    "id": "tm-008",
-    "name": "Eng. Chukwu Obi",
-    "role": "Robotics Engineer",
-    "batchYear": 2026,
-    "type": "R&D Fellow",
-    "initials": "CO",
-    "avatar": ""
-  },
-  {
-    "id": "tm-009",
-    "name": "Dr. Ngozi Eze",
-    "role": "NLP Research Lead",
-    "batchYear": 2026,
-    "type": "R&D Fellow",
-    "initials": "NE",
-    "avatar": ""
-  },
-  {
-    "id": "tm-010",
-    "name": "Eng. Emeka Nkwonta",
-    "role": "Building Systems Engineer",
-    "batchYear": 2026,
-    "type": "R&D Fellow",
-    "initials": "EN",
-    "avatar": ""
-  },
-  {
-    "id": "tm-011",
-    "name": "Dr. Blessing Okoro",
-    "role": "Cybersecurity Researcher",
-    "batchYear": 2026,
-    "type": "Contributor",
-    "initials": "BO",
-    "avatar": ""
-  },
-  {
-    "id": "tm-012",
-    "name": "Prof. Adekunle Ajayi",
-    "role": "Biometric Systems Expert",
-    "batchYear": 2026,
-    "type": "Contributor",
-    "initials": "AA",
-    "avatar": ""
-  },
-  {
-    "id": "tm-013",
-    "name": "Dr. Oluwatoyin Adewale",
-    "role": "Biotech Researcher",
-    "batchYear": 2026,
-    "type": "Contributor",
-    "initials": "OAD",
-    "avatar": ""
-  },
-  {
-    "id": "tm-014",
-    "name": "Eng. Ikechukwu Eze",
-    "role": "Blockchain Developer",
-    "batchYear": 2026,
-    "type": "Contributor",
-    "initials": "IE",
-    "avatar": ""
-  },
-  {
-    "id": "tm-015",
-    "name": "Dr. Amara Okafor",
-    "role": "Climate Scientist",
-    "batchYear": 2026,
-    "type": "Contributor",
-    "initials": "AO2",
-    "avatar": ""
-  },
-  {
-    "id": "tm-016",
-    "name": "Eng. Segun Adeyemi",
-    "role": "FinTech Developer",
-    "batchYear": 2026,
-    "type": "Contributor",
-    "initials": "SA",
-    "avatar": ""
-  },
-  {
-    "id": "tm-017",
-    "name": "Dr. Folake Okonkwo",
-    "role": "EdTech Specialist",
-    "batchYear": 2026,
-    "type": "Contributor",
-    "initials": "FO",
-    "avatar": ""
-  },
-  {
-    "id": "tm-018",
-    "name": "Eng. Chinedu Eze",
-    "role": "Environmental Engineer",
-    "batchYear": 2026,
-    "type": "Contributor",
-    "initials": "CE",
-    "avatar": ""
-  },
-  {
-    "id": "tm-019",
-    "name": "Dr. Nneka Obi",
-    "role": "Healthcare Systems Designer",
-    "batchYear": 2026,
-    "type": "Contributor",
-    "initials": "NO",
-    "avatar": ""
-  },
-  {
-    "id": "tm-020",
-    "name": "Eng. Taiwo Adeyemi",
-    "role": "Industrial IoT Engineer",
-    "batchYear": 2026,
-    "type": "Contributor",
-    "initials": "TA",
-    "avatar": ""
-  }
-]
+{
+  "members": [
+    {
+      "id": "tm-001",
+      "name": "Prof. Adeyemi Bello",
+      "role": "Director, R&D Initiative",
+      "batchYear": 2026,
+      "type": "Leadership",
+      "initials": "AB",
+      "avatar": ""
+    },
+    {
+      "id": "tm-002",
+      "name": "Dr. Amara Okafor",
+      "role": "Head of AI/ML Research",
+      "batchYear": 2026,
+      "type": "Leadership",
+      "initials": "AO",
+      "avatar": ""
+    },
+    {
+      "id": "tm-003",
+      "name": "Eng. Chisom Nwosu",
+      "role": "Lead Energy Systems Engineer",
+      "batchYear": 2026,
+      "type": "Leadership",
+      "initials": "CN",
+      "avatar": ""
+    },
+    {
+      "id": "tm-004",
+      "name": "Dr. Zainab Ahmed",
+      "role": "Environmental Technology Lead",
+      "batchYear": 2026,
+      "type": "Leadership",
+      "initials": "ZA",
+      "avatar": ""
+    },
+    {
+      "id": "tm-005",
+      "name": "Eng. Tunde Oladele",
+      "role": "IoT Systems Architect",
+      "batchYear": 2026,
+      "type": "R&D Fellow",
+      "initials": "TO",
+      "avatar": ""
+    },
+    {
+      "id": "tm-006",
+      "name": "Dr. Fatima Suleiman",
+      "role": "Quantum Computing Researcher",
+      "batchYear": 2026,
+      "type": "R&D Fellow",
+      "initials": "FS",
+      "avatar": ""
+    },
+    {
+      "id": "tm-007",
+      "name": "Dr. Oluwaseun Adebayo",
+      "role": "Healthcare AI Specialist",
+      "batchYear": 2026,
+      "type": "R&D Fellow",
+      "initials": "OA",
+      "avatar": ""
+    },
+    {
+      "id": "tm-008",
+      "name": "Eng. Chukwu Obi",
+      "role": "Robotics Engineer",
+      "batchYear": 2026,
+      "type": "R&D Fellow",
+      "initials": "CO",
+      "avatar": ""
+    },
+    {
+      "id": "tm-009",
+      "name": "Dr. Ngozi Eze",
+      "role": "NLP Research Lead",
+      "batchYear": 2026,
+      "type": "R&D Fellow",
+      "initials": "NE",
+      "avatar": ""
+    },
+    {
+      "id": "tm-010",
+      "name": "Eng. Emeka Nkwonta",
+      "role": "Building Systems Engineer",
+      "batchYear": 2026,
+      "type": "R&D Fellow",
+      "initials": "EN",
+      "avatar": ""
+    },
+    {
+      "id": "tm-011",
+      "name": "Dr. Blessing Okoro",
+      "role": "Cybersecurity Researcher",
+      "batchYear": 2026,
+      "type": "Contributor",
+      "initials": "BO",
+      "avatar": ""
+    },
+    {
+      "id": "tm-012",
+      "name": "Prof. Adekunle Ajayi",
+      "role": "Biometric Systems Expert",
+      "batchYear": 2026,
+      "type": "Contributor",
+      "initials": "AA",
+      "avatar": ""
+    },
+    {
+      "id": "tm-013",
+      "name": "Dr. Oluwatoyin Adewale",
+      "role": "Biotech Researcher",
+      "batchYear": 2026,
+      "type": "Contributor",
+      "initials": "OAD",
+      "avatar": ""
+    },
+    {
+      "id": "tm-014",
+      "name": "Eng. Ikechukwu Eze",
+      "role": "Blockchain Developer",
+      "batchYear": 2026,
+      "type": "Contributor",
+      "initials": "IE",
+      "avatar": ""
+    },
+    {
+      "id": "tm-015",
+      "name": "Dr. Amara Okafor",
+      "role": "Climate Scientist",
+      "batchYear": 2026,
+      "type": "Contributor",
+      "initials": "AO2",
+      "avatar": ""
+    },
+    {
+      "id": "tm-016",
+      "name": "Eng. Segun Adeyemi",
+      "role": "FinTech Developer",
+      "batchYear": 2026,
+      "type": "Contributor",
+      "initials": "SA",
+      "avatar": ""
+    },
+    {
+      "id": "tm-017",
+      "name": "Dr. Folake Okonkwo",
+      "role": "EdTech Specialist",
+      "batchYear": 2026,
+      "type": "Contributor",
+      "initials": "FO",
+      "avatar": ""
+    },
+    {
+      "id": "tm-018",
+      "name": "Eng. Chinedu Eze",
+      "role": "Environmental Engineer",
+      "batchYear": 2026,
+      "type": "Contributor",
+      "initials": "CE",
+      "avatar": ""
+    },
+    {
+      "id": "tm-019",
+      "name": "Dr. Nneka Obi",
+      "role": "Healthcare Systems Designer",
+      "batchYear": 2026,
+      "type": "Contributor",
+      "initials": "NO",
+      "avatar": ""
+    },
+    {
+      "id": "tm-020",
+      "name": "Eng. Taiwo Adeyemi",
+      "role": "Industrial IoT Engineer",
+      "batchYear": 2026,
+      "type": "Contributor",
+      "initials": "TA",
+      "avatar": ""
+    }
+  ]
+}
