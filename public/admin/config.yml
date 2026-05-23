@@ -3,6 +3,10 @@ backend:
   repo: rd-atbu-conces/conces-rd-portfolio
   branch: main
 
+# FIX #2: Activates batch-saving. Edits save as Draft Pull Requests. 
+# Re-deploys only happen when you click "Publish" inside the dashboard.
+publish_mode: editorial_workflow
+
 media_folder: "public/images"
 public_folder: "/conces-rd-portfolio/images"
 
@@ -18,12 +22,13 @@ collections:
           - label: "Projects List Matrix"
             name: "projects"
             widget: "list"
+            required: false
+            default: []
             fields:
-              # Automatically writes the generated ID right into your list item object
               - { label: "Project ID Code", name: "id", widget: "hidden", default: "p2026-e{{uuid_shorter}}" }
               - { label: "Project Title", name: "title", widget: "string" }
               - { label: "Research Investigator / Lead", name: "lead", widget: "string" }
-              - { label: "Exhibition Year", name: "year", widget: "number", default: 2026 }
+              - { label: "Exhibition Date", name: "year", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
               - { label: "Category", name: "category", widget: "string" }
               - { label: "Status", name: "status", widget: "select", options: ["Finalist", "Prototype", "Active Research"] }
               - { label: "Podium Ranking", name: "podiumRank", widget: "select", options: [{label: "Participant", value: "0"}, {label: "1st Place", value: "1"}], default: "0" }
@@ -36,13 +41,11 @@ collections:
     label: "Core Laboratory System Projects"
     folder: "src/content/projects/projects"
     create: true
-    # Automatically names the new file generated in your folder structure
     slug: "p2026-c{{uuid_shorter}}"
     identifier_field: "id"
     extension: "json"
     format: "json"
     fields:
-      # Hides the ID input block and injects the core pattern inside the JSON file
       - { label: "Project ID Slug", name: "id", widget: "hidden", default: "p2026-c{{uuid_shorter}}" }
       - { label: "Core Project Title", name: "title", widget: "string" }
       - { label: "Principal Investigator", name: "lead", widget: "string" }
@@ -64,8 +67,9 @@ collections:
           - label: "Team Members"
             name: "members"
             widget: "list"
+            required: false
+            default: []
             fields:
-              # For team members, it creates clean IDs based on a "m-[year]-[random]" format
               - { label: "Member ID", name: "id", widget: "hidden", default: "m-2026-{{uuid_shorter}}" }
               - { label: "Full Name", name: "name", widget: "string" }
               - { label: "Official Role", name: "role", widget: "string" }
