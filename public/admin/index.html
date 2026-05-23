@@ -6,11 +6,11 @@
     <title>Content Manager</title>
   </head>
   <body>
+    <!-- Decap CMS Core Script -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
     <script>
-      // Hardcode the config directly into the initialization.
-      // This forces the browser to ignore the file system completely.
-      initCMS({
+      // Fixed: Using window.CMS.init instead of initCMS
+      window.CMS.init({
         config: {
           backend: {
             name: "github",
@@ -36,24 +36,20 @@
                       label: "Projects List Matrix",
                       name: "projects",
                       widget: "list",
-                      field: {
-                        label: "Project Item",
-                        name: "project_item",
-                        widget: "object",
-                        fields: [
-                          { label: "Project ID Code", name: "id", widget: "string" },
-                          { label: "Project Title", name: "title", widget: "string" },
-                          { label: "Research Investigator / Lead", name: "lead", widget: "string" },
-                          { label: "Exhibition Year", name: "year", widget: "number", default: 2026 },
-                          { label: "Category", name: "category", widget: "string" },
-                          { label: "Status", name: "status", widget: "select", options: ["Finalist", "Prototype", "Active Research"] },
-                          { label: "Podium Ranking", name: "podiumRank", widget: "select", options: [{label: "Participant", value: 0}, {label: "1st Place", value: 1}], default: 0 },
-                          { label: "Show in Homepage Spotlight?", name: "isSpotlight", widget: "boolean", default: true },
-                          { label: "Description", name: "description", widget: "text" },
-                          { label: "Main Image", name: "mainImage", widget: "image", required: false },
-                          { label: "Live URL", name: "liveUrl", widget: "string", required: false }
-                        ]
-                      }
+                      // Fixed: Removed nested object field to make parsing robust
+                      fields: [
+                        { label: "Project ID Code", name: "id", widget: "string" },
+                        { label: "Project Title", name: "title", widget: "string" },
+                        { label: "Research Investigator / Lead", name: "lead", widget: "string" },
+                        { label: "Exhibition Year", name: "year", widget: "number", default: 2026 },
+                        { label: "Category", name: "category", widget: "string" },
+                        { label: "Status", name: "status", widget: "select", options: ["Finalist", "Prototype", "Active Research"] },
+                        { label: "Podium Ranking", name: "podiumRank", widget: "select", options: [{label: "Participant", value: "0"}, {label: "1st Place", value: "1"}], default: "0" },
+                        { label: "Show in Homepage Spotlight?", name: "isSpotlight", widget: "boolean", default: true },
+                        { label: "Description", name: "description", widget: "text" },
+                        { label: "Main Image", name: "mainImage", widget: "image", required: false },
+                        { label: "Live URL", name: "liveUrl", widget: "string", required: false }
+                      ]
                     }
                   ]
                 }
@@ -93,20 +89,16 @@
                       label: "Team Members",
                       name: "members",
                       widget: "list",
-                      field: {
-                        label: "Member",
-                        name: "member_item",
-                        widget: "object",
-                        fields: [
-                          { label: "Member ID", name: "id", widget: "string" },
-                          { label: "Full Name", name: "name", widget: "string" },
-                          { label: "Official Role", name: "role", widget: "string" },
-                          { label: "Batch Year", name: "batchYear", widget: "number", default: 2026 },
-                          { label: "Designation Type", name: "type", widget: "select", options: ["Leadership", "R&D Fellow", "Contributor"] },
-                          { label: "Initials", name: "initials", widget: "string" },
-                          { label: "Avatar Photo", name: "avatar", widget: "image", required: false }
-                        ]
-                      }
+                      // Fixed: Cleaned up nested object definitions
+                      fields: [
+                        { label: "Member ID", name: "id", widget: "string" },
+                        { label: "Full Name", name: "name", widget: "string" },
+                        { label: "Official Role", name: "role", widget: "string" },
+                        { label: "Batch Year", name: "batchYear", widget: "number", default: 2026 },
+                        { label: "Designation Type", name: "type", widget: "select", options: ["Leadership", "R&D Fellow", "Contributor"] },
+                        { label: "Initials", name: "initials", widget: "string" },
+                        { label: "Avatar Photo", name: "avatar", widget: "image", required: false }
+                      ]
                     }
                   ]
                 }
