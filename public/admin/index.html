@@ -9,7 +9,8 @@
   <body>
     <script src="https://unpkg.com/@staticcms/core@^4.0.0/dist/static-cms-core.js"></script>
     <script>
-      window.CMS.init({
+      // Static CMS uses StaticCMS.init, not CMS.init
+      window.StaticCMS.init({
         config: {
           config_url: "/conces-rd-portfolio/admin/config.yml",
           backend: {
