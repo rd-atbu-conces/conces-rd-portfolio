@@ -1,0 +1,85 @@
+backend:
+  name: github
+  repo: rd-atbu-conces/conces-rd-portfolio 
+  branch: main
+  auth_type: implicit 
+  app_id: Ov23liH0eIYa850dRSGR
+
+media_folder: "public/images"
+public_folder: "/conces-rd-portfolio/images"
+
+collections:
+  # 1. ANNUAL EXHIBITION DIRECTORY
+  - name: "exhibition_archive"
+    label: "Exhibition Submissions Archives"
+    files:
+      - file: "src/content/projects/exhibition-projects/2026.json"
+        label: "Exhibition Submissions (2026 Batch)"
+        name: "exhibition_2026"
+        format: "json"
+        fields:
+          - label: "Projects List Matrix"
+            name: "projects"
+            widget: "list"
+            field: # Changed from 'fields' to 'field' for simple list items
+              label: "Project Item"
+              name: "project_item" # REQUIRED NAME
+              widget: "object"
+              fields:
+                - { label: "Project ID Code", name: "id", widget: "string" }
+                - { label: "Project Title", name: "title", widget: "string" }
+                - { label: "Research Investigator / Lead", name: "lead", widget: "string" }
+                - { label: "Exhibition Year", name: "year", widget: "number", default: 2026 }
+                - { label: "Category", name: "category", widget: "string" }
+                - { label: "Status", name: "status", widget: "select", options: ["Finalist", "Prototype", "Active Research"] }
+                - { label: "Podium Ranking", name: "podiumRank", widget: "select", options: [{label: "Participant", value: 0}, {label: "1st Place", value: 1}], default: 0 }
+                - { label: "Show in Homepage Spotlight?", name: "isSpotlight", widget: "boolean", default: true }
+                - { label: "Description", name: "description", widget: "text" }
+                - { label: "Main Image", name: "mainImage", widget: "image", required: false }
+                - { label: "Gallery", name: "gallery", widget: "list", field: { label: "Image", name: "image", widget: "image" }, required: false }
+                - { label: "Live URL", name: "liveUrl", widget: "string", required: false }
+
+  # 2. CORE LABORATORY SYSTEMS
+  - name: "core_projects"
+    label: "Core Laboratory System Projects"
+    folder: "src/content/projects/projects"
+    create: true
+    slug: "{{fields.id}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Project ID Slug", name: "id", widget: "string" }
+      - { label: "Core Project Title", name: "title", widget: "string" }
+      - { label: "Principal Investigator", name: "lead", widget: "string" }
+      - { label: "Initiation Date", name: "startDate", widget: "date" }
+      - { label: "Scientific Domain", name: "category", widget: "string" }
+      - { label: "Development Phase", name: "status", widget: "select", options: ["Active Research", "Prototype Completed", "Production Scaling"] }
+      - { label: "Detailed System Description", name: "description", widget: "text" }
+      - { label: "Main Structural Image", name: "mainImage", widget: "image", required: false }
+      - { label: "System Blueprint Gallery", name: "gallery", widget: "list", field: { label: "Image", name: "image", widget: "image" }, required: false }
+      - { label: "Live System Link", name: "liveUrl", widget: "string", required: false }
+
+  # 3. TEAM ROSTER
+  - name: "team_directory"
+    label: "Team Directory Settings"
+    files:
+      - file: "src/content/team/members.json"
+        label: "Manage Team Members Roster"
+        name: "members_list"
+        format: "json"
+        fields:
+          - label: "Team Members"
+            name: "members"
+            widget: "list"
+            field:
+              label: "Member"
+              name: "member_item" # REQUIRED NAME
+              widget: "object"
+              fields:
+                - { label: "Member ID", name: "id", widget: "string" }
+                - { label: "Full Name", name: "name", widget: "string" }
+                - { label: "Official Role", name: "role", widget: "string" }
+                - { label: "Batch Year", name: "batchYear", widget: "number", default: 2026 }
+                - { label: "Designation Type", name: "type", widget: "select", options: ["Leadership", "R&D Fellow", "Contributor"] }
+                - { label: "Initials", name: "initials", widget: "string" }
+                - { label: "Avatar Photo", name: "avatar", widget: "image", required: false }
