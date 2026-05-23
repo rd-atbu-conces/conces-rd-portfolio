@@ -19,7 +19,8 @@ collections:
             name: "projects"
             widget: "list"
             fields:
-              - { label: "Project ID Code", name: "id", widget: "string" }
+              # Automatically writes the generated ID right into your list item object
+              - { label: "Project ID Code", name: "id", widget: "hidden", default: "p2026-e{{uuid_shorter}}" }
               - { label: "Project Title", name: "title", widget: "string" }
               - { label: "Research Investigator / Lead", name: "lead", widget: "string" }
               - { label: "Exhibition Year", name: "year", widget: "number", default: 2026 }
@@ -35,14 +36,17 @@ collections:
     label: "Core Laboratory System Projects"
     folder: "src/content/projects/projects"
     create: true
-    slug: "{{fields.id}}"
+    # Automatically names the new file generated in your folder structure
+    slug: "p2026-c{{uuid_shorter}}"
+    identifier_field: "id"
     extension: "json"
     format: "json"
     fields:
-      - { label: "Project ID Slug", name: "id", widget: "string" }
+      # Hides the ID input block and injects the core pattern inside the JSON file
+      - { label: "Project ID Slug", name: "id", widget: "hidden", default: "p2026-c{{uuid_shorter}}" }
       - { label: "Core Project Title", name: "title", widget: "string" }
       - { label: "Principal Investigator", name: "lead", widget: "string" }
-      - { label: "Initiation Date", name: "startDate", widget: "date" }
+      - { label: "Initiation Date", name: "startDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
       - { label: "Scientific Domain", name: "category", widget: "string" }
       - { label: "Development Phase", name: "status", widget: "select", options: ["Active Research", "Prototype Completed", "Production Scaling"] }
       - { label: "Detailed System Description", name: "description", widget: "text" }
@@ -61,7 +65,8 @@ collections:
             name: "members"
             widget: "list"
             fields:
-              - { label: "Member ID", name: "id", widget: "string" }
+              # For team members, it creates clean IDs based on a "m-[year]-[random]" format
+              - { label: "Member ID", name: "id", widget: "hidden", default: "m-2026-{{uuid_shorter}}" }
               - { label: "Full Name", name: "name", widget: "string" }
               - { label: "Official Role", name: "role", widget: "string" }
               - { label: "Batch Year", name: "batchYear", widget: "number", default: 2026 }
